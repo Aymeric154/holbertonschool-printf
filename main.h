@@ -14,7 +14,7 @@
 
 typedef struct printer
 {
-	char *spec;
+	char spec;
 	int (*func)(va_list);
 
 } printer_t;

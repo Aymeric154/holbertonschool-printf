@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stddef.h>
+#include <stdio.h>
 /**
  * *get_func - which takes a character as an argument
  * and returns a pointer to another function
@@ -34,5 +34,3 @@ int (*get_func(char conv_spec))(va_list)
 	}
 	return (0);
 }
-
-
