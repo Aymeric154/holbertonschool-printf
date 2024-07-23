@@ -7,14 +7,15 @@
 #include <unistd.h>
 
 /**
- *
- *
+ * struct printer - instructions for _printf
+ * @spec: specifier to identify and print
+ * @func: list of functions
  */
 
-typedef struct printer {
-
-    char *spec;
-    int (*func)(va_list);
+typedef struct printer
+{
+	char *spec;
+	int (*func)(va_list);
 
 } printer_t;
 
