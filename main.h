@@ -1,14 +1,29 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <stdlib.h>
+#include <stdarg.h>
+#include <stdio.h>
 #include <unistd.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * struct printer - instructions for _printf
+ * @spec: specifier to identify and print
+ * @func: list of functions
  */
 
-int _putchar(char c)
+typedef struct printer
 {
-	return (write(1, &c, 1));
-}
+	char *spec;
+	int (*func)(va_list);
+
+} printer_t;
+
+int (*get_func(char conv_spec))(va_list);
+int _printf(const char *format, ...);
+int _putchar(char c);
+int print_s(va_list args);
+int print_c(va_list args);
+int print_percent(va_list args);
+
+#endif
