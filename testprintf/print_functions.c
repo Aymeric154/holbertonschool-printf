@@ -1,27 +1,59 @@
+#include<stdio.h>
 #include "main.h"
-
+#include <stdarg.h>
+#include <unistd.h>
 /**
- * get_func - sélectionne la fonction correcte pour effectuer l'opération
- * @conv_spec: caractère qui contient le spécificateur de conversion
- * 
- * Return: pointeur vers la fonction correspondant au spécificateur
+ * print_c - function print a single character
+ *
+ * @arg: list of argument
+ * Return: 1, always print one character
  */
-int (*get_func(char conv_spec))(va_list) {
-    /* Tableau de structures associant spécificateurs de format et fonctions correspondantes */
-    printer_t funcs[] = {
-        {"c", print_c},           /* Spécificateur 'c' pour imprimer un caractère */
-        {"s", print_s},           /* Spécificateur 's' pour imprimer une chaîne */
-        {"%", print_percent},     /* Spécificateur '%' pour imprimer le symbole '%' */
-        {NULL, NULL}              /* Marqueur de fin de tableau */
-    };
 
-    int i;
+int print_c(va_list arg)
+{
 
-    /* Parcourir le tableau pour trouver la fonction correspondant au spécificateur */
-    for (i = 0; funcs[i].spec != NULL; i++) {
-        if (conv_spec == *(funcs[i].spec))
-            return (funcs[i].func);  /* Retourne le pointeur vers la fonction trouvée */
-    }
-    return (NULL);  /* Retourne NULL si aucun spécificateur correspondant n'est trouvé */
+	char c = va_arg(arg, int);
+
+	_putchar(c);
+	return (1);
 }
 
+/**
+ * print_s - function print a string
+ *
+ * @arg: list of argument
+ *
+ * Return: the count of printed characters
+ */
+
+
+int print_s(va_list arg)
+{
+	char *str = va_arg(arg, char *);
+	int i = 0;
+
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	while (str[i])
+	{
+		i += write(1, &str[i], 1);
+	}
+	return (i);
+}
+
+/**
+ * print_percent - function to handle the printing of a "%" characte
+ *
+ * @arg: list of argument
+ *
+ * Return: the count of printed characters
+ */
+
+int print_percent(va_list arg)
+{
+	(void)arg;
+	_putchar(37);
+	return (1);
+}
