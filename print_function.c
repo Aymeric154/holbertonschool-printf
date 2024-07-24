@@ -76,9 +76,12 @@ int print_nums(va_list arg)
 
 	if (number < 0)
 	{
-		_putchar('-');
-		count += 1;
+		count = _putchar('-');
 		number = number * -1;
+	}
+	if (number == 0)
+	{
+		return (count + _putchar('0'));
 	}
 
 	while (number / divise >= 10)
@@ -95,4 +98,3 @@ int print_nums(va_list arg)
 	}
 	return (count);
 }
-
