@@ -1,12 +1,22 @@
-## Printf Function
+# Holbertonschool # Printf project
 
-The printf function is a C standard library function that formats text and writes it to standard output.
+This document provides a brief overview of a custom implementation of the printf function in C.
 
-## Basic Syntax
+## Description
+
+The custom printf function allows formatted output to the console, similar to the standard printf. It supports basic data types and format specifiers
+
+## Function prototype
 
 int printf(const char *format, ...);
 
 
-## Description
+### Specifier used
+
+- Displaying percent sign: %%
+- Displaying strings: %s
+- Displaying characteres: %c
+- Displaying integers: %d, %i
+
 
 
