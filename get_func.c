@@ -21,6 +21,8 @@ int (*get_func(char conv_spec))(va_list)
 		{'c', print_c},
 		{'s', print_s},
 		{'%', print_percent},
+		{'d', print_nums},
+		{'i', print_nums},
 		{'\0', NULL}
 	};
 
