@@ -57,3 +57,42 @@ int print_percent(va_list arg)
 	_putchar(37);
 	return (1);
 }
+
+
+/**
+ * print_nums - function which print numbers
+ *
+ * @arg: list of argument
+ *
+ * Return: count of charactere printed
+ */
+
+int print_nums(va_list arg)
+{
+	int number = va_arg(arg, int);
+	int count = 0;
+	int divise = 1;
+	int digit;
+
+	if (number < 0)
+	{
+		_putchar('-');
+		count += 1;
+		number = number * -1;
+	}
+
+	while (number / divise >= 10)
+	{
+		divise = divise * 10;
+	}
+
+	while (divise > 0)
+	{
+		digit = (number / divise) % 10;
+		_putchar(digit + '0');
+		count++;
+		divise = divise / 10;
+	}
+	return (count);
+}
+
