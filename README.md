@@ -23,7 +23,7 @@ How to Use the Function
 
     Use the Function Prototype: Declare the _printf prototype in your program.
 
-    Handle Variable Arguments: Use standard library functions to manage variable arguments, such as va_start, va_arg, and va_end.
+    Handle Variable Arguments: Use standard library functions to manage variable arguments, such as va_start, va_arg, an    d va_end.
 
     Parse Format Specifiers: Implement logic to identify and handle different format specifiers in the format string.
 
