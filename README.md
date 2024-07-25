@@ -61,4 +61,8 @@ The project is structured into several files for better organization and modular
     main.h:
     Contains the function prototypes and necessary library inclusions.
 
+    
+
+##List of contributors of the projet _printf:  Gelle Aymeric Boureima Diarra
+
   
