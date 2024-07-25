@@ -21,7 +21,7 @@ int _printf(const char *format, ...);
   Include the necessary libraries for your project, such as stdio.h for console operations.
 
 - Use the Function Prototype:  
-  Declare the _printf prototype in your program.
+  Declare the _printf prototype in your program seen above.
 
 - Handle Variable Arguments:  
   Use standard library functions to manage variable arguments, such as va_start, va_arg, an    d va_end.
