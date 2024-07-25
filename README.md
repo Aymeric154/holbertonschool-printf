@@ -15,7 +15,7 @@ int _printf(const char *format, ...);
     Displaying characters: %c
     Displaying integers: %d, %i
 
-##How to Use the Function
+## How to Use the Function
 
 - Include Libraries: Include the necessary libraries for your project, such as stdio.h for console operations.
 
