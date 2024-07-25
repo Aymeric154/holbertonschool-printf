@@ -63,7 +63,7 @@ The project is structured into several files for better organization and modular
 
     
 
-##List of contributors of the projet _printf:  
+## List of contributors of the projet _printf: 
 Gelle Aymeric Boureima Diarra
 
   
