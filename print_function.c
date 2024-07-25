@@ -69,7 +69,7 @@ int print_percent(va_list arg)
 
 int print_nums(va_list arg)
 {
-	int number = va_arg(arg, int);
+	long int number = va_arg(arg, int);
 	int count = 0;
 	long int divise = 1;
 	int digit;
@@ -77,7 +77,7 @@ int print_nums(va_list arg)
 	if (number < 0)
 	{
 		count += _putchar('-');
-		number = -number;
+		number *= -1 ;
 	}
 	if (number == 0)
 	{
