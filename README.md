@@ -42,7 +42,7 @@ The core functionality of _printf involves parsing the format string to identify
     Call the corresponding function to handle each data type and produce the formatted output.
 
 ## Implementation Details
-## Project Structure
+### Project Structure
 
 The project is structured into several files for better organization and modularity:
 
