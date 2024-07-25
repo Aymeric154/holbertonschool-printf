@@ -71,7 +71,8 @@ int print_nums(va_list arg)
 {
 	int number = va_arg(arg, int);
 	int count = 0;
-	int divise = 1;
+	long int divise = 1;
+	int digit;
 
 	if (number < 0)
 	{
@@ -90,7 +91,7 @@ int print_nums(va_list arg)
 
 	while (divise > 0)
 	{
-		int digit = (number / divise) % 10;
+		digit = (number / divise) % 10;
 		count += _putchar(digit + '0');
 		divise = divise / 10;
 	}
