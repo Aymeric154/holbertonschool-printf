@@ -17,17 +17,17 @@ int _printf(const char *format, ...);
 
 ## How to Use the Function
 
-- Include Libraries:
+- Include Libraries:  
   Include the necessary libraries for your project, such as stdio.h for console operations.
 
-- Use the Function Prototype:
+- Use the Function Prototype:  
   Declare the _printf prototype in your program.
 
-- Handle Variable Arguments:
+- Handle Variable Arguments:  
   Use standard library functions to manage variable arguments, such as va_start, va_arg, an    d va_end.
 
-- Parse Format Specifiers:
+- Parse Format Specifiers:  
    Implement logic to identify and handle different format specifiers in the format string.
 
-- Return Character Count:
+- Return Character Count:  
   The function should return the total number of characters printed.
